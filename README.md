@@ -4,16 +4,9 @@ FutureLearn Digital is on a mission to transform access to education with online
 
 ## Live server
 
-https://www.netlify.com/
-
 ## Description
 
-- a
-- b
-- a
-- b
-- a
-- b
+## Tech Stack
 
 In the project directory, you can run:
 
