@@ -1,8 +1,19 @@
-# Getting Started with Create React App
+# Future Learn Digital
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FutureLearn Digital is on a mission to transform access to education with online courses from the leading universities and brands.
 
-## Available Scripts
+## Live server
+
+https://www.netlify.com/
+
+## Description
+
+- a
+- b
+- a
+- b
+- a
+- b
 
 In the project directory, you can run:
 
