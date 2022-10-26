@@ -7,16 +7,13 @@ const Main = () => {
     <div>
       <Header></Header>
       <div className="flex container mx-auto mt-4 gap-4">
-
-        <div className="w-full border border-indigo-600 ">
+        <div className="w-full border border-indigo-200 ">
           <Outlet></Outlet>
         </div>
-
       </div>
 
       <Footer></Footer>
-    </div >
-
+    </div>
   );
 };
 
