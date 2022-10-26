@@ -1,11 +1,22 @@
 import React from "react";
-
+import { Outlet } from "react-router-dom";
+import Footer from "../Shared/Footer/Footer";
+import Header from "../Shared/Header/Header";
 const Main = () => {
   return (
     <div>
-      <h2>This is Main</h2>
-      <h1>I Am </h1>
-    </div>
+      <Header></Header>
+      <div className="flex container mx-auto mt-4 gap-4">
+
+        <div className="w-full border border-indigo-600 ">
+          <Outlet></Outlet>
+        </div>
+
+      </div>
+
+      <Footer></Footer>
+    </div >
+
   );
 };
 
