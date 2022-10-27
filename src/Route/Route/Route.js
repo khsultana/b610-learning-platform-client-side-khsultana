@@ -20,7 +20,10 @@ export const routes = createBrowserRouter([
       {
         path: "/courses",
         element: <Courses></Courses>,
-        loader: () => fetch(`http://localhost:5000/course-Details`),
+        loader: () =>
+          fetch(
+            `https://future-learn-digital-server.vercel.app/course-Details`
+          ),
       },
       {
         path: "faq",
@@ -34,7 +37,9 @@ export const routes = createBrowserRouter([
         path: "/courses/:id",
         element: <CourseLink></CourseLink>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/course_Id/${params.id}`),
+          fetch(
+            `https://future-learn-digital-server.vercel.app/course_Id/${params.id}`
+          ),
       },
       {
         path: "/login",

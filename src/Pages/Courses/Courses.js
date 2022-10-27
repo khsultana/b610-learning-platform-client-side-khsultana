@@ -10,7 +10,7 @@ const Courses = () => {
 
   const [courseList, setCourseList] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/course-categories")
+    fetch("https://future-learn-digital-server.vercel.app/course-categories")
       .then((res) => res.json())
       .then((data) => setCourseList(data));
   }, []);
