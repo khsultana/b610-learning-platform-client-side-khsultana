@@ -1,9 +1,21 @@
 import { Link } from "react-router-dom";
 import DarkModeToggle from "react-dark-mode-toggle";
 import React, { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/Auth Provider/AuthProvider";
+import { FaUser } from "react-icons/fa";
 
 const Header = () => {
+  const { user, userSignOut } = useContext(AuthContext);
   const [isDarkMode, setIsDarkMode] = useState(() => false);
+
+  const handleUserSignOut = () => {
+    userSignOut()
+      .then(() => {})
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div className="navbar bg-base-100 shadow-lg ">
@@ -25,13 +37,40 @@ const Header = () => {
       </div>
 
       <div className="navbar-end">
-        <div>
-          <Link className="font-semibold" to="/login">
-            Login
-          </Link>
-          <Link className="font-semibold" to="/register">
-            Register
-          </Link>
+        <div className="flex gap-3 items-center justify-center">
+          <div>
+            {user?.uid ? (
+              <>
+                <span className="py-3 m-3"> {user?.displayName}</span>
+                <button
+                  onClick={handleUserSignOut}
+                  className="btn btn-outline rounded-none py-3"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link className="font-semibold p-3" to="/login">
+                  <button className="btn btn-outline">Login</button>
+                </Link>
+                <Link className="font-semibold py-3" to="/register">
+                  <button className="btn btn-outline">Register</button>
+                </Link>
+              </>
+            )}
+          </div>
+          <p>
+            {user?.photoURL ? (
+              <img
+                className="rounded-full"
+                style={{ height: "40px" }}
+                src={user.photoURL}
+              ></img>
+            ) : (
+              <FaUser></FaUser>
+            )}
+          </p>
         </div>
         <button className="btn btn-ghost btn-circle">
           <svg
