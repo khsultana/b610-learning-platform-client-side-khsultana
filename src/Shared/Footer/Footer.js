@@ -5,25 +5,47 @@ const Footer = () => {
   return (
     <div className="lg:w-auto  sm:mx-auto">
       <footer className=" sm:flex-row  lg:flex  justify-around footer footer-center p-10 bg-base-200 text-base-content rounded">
-        <div>
-          <span className="footer-title">Services</span>
-          <Link className="link link-hover">Branding</Link>
-          <Link className="link link-hover">Design</Link>
-          <Link className="link link-hover">Marketing</Link>
-          <Link className="link link-hover">Advertisement</Link>
+        <div className="flex flex-col items-start">
+          <span className="footer-title">Browse by subject</span>
+          <Link className="link link-hover">Computer Science</Link>
+          <Link className="link link-hover">Psychology</Link>
+          <Link className="link link-hover">Cybersecurity</Link>
+          <Link className="link link-hover">Health</Link>
+          <Link className="link link-hover">Law </Link>
+          <Link className="link link-hover">Web Development</Link>
+
+          <Link className="link link-hover"> Accounting</Link>
         </div>
-        <div>
-          <span className="footer-title">Company</span>
-          <Link className="link link-hover">About us</Link>
-          <Link className="link link-hover">Contact</Link>
-          <Link className="link link-hover">Jobs</Link>
-          <Link className="link link-hover">Press kit</Link>
+        <div className="flex flex-col items-start">
+          <span className="footer-title ">Browse by institution </span>
+          <Link className="link link-hover">Google</Link>
+          <Link className="link link-hover">Microsoft</Link>
+          <Link className="link link-hover">IBM</Link>
+          <Link className="link link-hover">Amazon</Link>
+          <Link className="link link-hover">Linux Foundation</Link>
+          <Link className="link link-hover">British Council</Link>
+          <Link className="link link-hover">Salesforce</Link>
         </div>
-        <div>
-          <span className="footer-title">Legal</span>
-          <Link className="link link-hover">Terms of use</Link>
-          <Link className="link link-hover">Privacy policy</Link>
-          <Link className="link link-hover">Cookie policy</Link>
+
+        <div className="flex flex-col items-start">
+          <span className="footer-title ">Browse by provider </span>
+          <Link className="link link-hover">Coursera</Link>
+          <Link className="link link-hover">edX</Link>
+          <Link className="link link-hover">FutureLearn</Link>
+          <Link className="link link-hover">Udemy</Link>
+          <Link className="link link-hover">Swayam</Link>
+          <Link className="link link-hover">Udacity</Link>
+          <Link className="link link-hover">LinkedIn Learning</Link>
+        </div>
+        <div className="flex flex-col items-start">
+          <span className="footer-title">Browse by university</span>
+          <Link className="link link-hover">Harvard</Link>
+          <Link className="link link-hover">Stanford</Link>
+          <Link className="link link-hover">Georgia Tech</Link>
+          <Link className="link link-hover">University of Michigan</Link>
+          <Link className="link link-hover">Purdue University</Link>
+          <Link className="link link-hover">Duke University</Link>
+          <Link className="link link-hover">IIT Madras</Link>
         </div>
       </footer>
       <footer className=" footer footer-center p-10 bg-base-200 text-base-content rounded">

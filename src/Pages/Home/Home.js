@@ -50,15 +50,15 @@ const Home = () => {
 
       {/* Find your next course. */}
 
-      <div className="sm:grid sm:grid-cols-1 lg:flex lg:justify-center lg:items-center mt-20 mb-20">
+      <div className="sm:grid sm:grid-cols-1 lg:flex  lg:justify-center lg:items-center mt-10 mb-10">
         <div>
           <img
-            style={{ width: "400px" }}
-            src="https://ccweb.imgix.net/https%3A%2F%2Fwww.classcentral.com%2Fimages%2Fillustrations%2Flearning-illustration-diwali-02.png?auto=format&h=650&ixlib=php-3.3.1&s=78593b350348c4d4b673ba20a6b4f8ac"
+            style={{ width: "600px" }}
+            src="https://assets.materialup.com/uploads/897dce47-abf1-4013-b1cf-32352470830d/preview.jpg"
             alt=""
           />
         </div>
-        <div className="w-1/2 m-6 ">
+        <div className="w-1/2 m-6  ">
           <h2 className="text-4xl font-bold mb-5"> Find your next course.</h2>
 
           <div className="form-control">
@@ -88,8 +88,86 @@ const Home = () => {
           </div>
 
           <p>Or browse by subject or university</p>
+
+          <h2 className="font-semibold mb-2">Popular courses</h2>
+          <div className="grid grid-cols-3 gap-2">
+            <div className="flex w-40 items-center gap-1 rounded-xl border-2">
+              <div>
+                <img
+                  className="rounded-2xl"
+                  style={{ width: "32px", height: "32px" }}
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVW4n8uIJRAZFbyEsLvjVB7cvMVQfSOMGVA&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div>Free Certificate</div>
+            </div>
+            {/* 2 */}
+            <div className="flex w-40 items-center gap-1 rounded-xl border-2">
+              <div>
+                <img
+                  className="rounded-xl"
+                  style={{ width: "32px", height: "32px" }}
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVW4n8uIJRAZFbyEsLvjVB7cvMVQfSOMGVA&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div>Free Certificate</div>
+            </div>
+            {/* 3 */}
+            <div className="flex w-40 items-center gap-1 rounded-xl border-2">
+              <div>
+                <img
+                  className="rounded-xl"
+                  style={{ width: "32px", height: "32px" }}
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVW4n8uIJRAZFbyEsLvjVB7cvMVQfSOMGVA&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div>Free Certificate</div>
+            </div>{" "}
+            {/* 4 */}
+            <div className="flex w-40 items-center gap-1 rounded-xl border-2">
+              <div>
+                <img
+                  className="rounded-xl"
+                  style={{ width: "32px", height: "32px" }}
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVW4n8uIJRAZFbyEsLvjVB7cvMVQfSOMGVA&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div>Free Certificate</div>
+            </div>
+            {/* 5 */}
+            <div className="flex w-40 items-center gap-1 rounded-xl border-2">
+              <div>
+                <img
+                  className="rounded-xl"
+                  style={{ width: "32px", height: "32px" }}
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVW4n8uIJRAZFbyEsLvjVB7cvMVQfSOMGVA&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div>Free Certificate</div>
+            </div>
+            {/* 6 */}
+            <div className="flex w-40 items-center gap-1 rounded-xl border-2">
+              <div>
+                <img
+                  className="rounded-xl"
+                  style={{ width: "32px", height: "32px" }}
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVW4n8uIJRAZFbyEsLvjVB7cvMVQfSOMGVA&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div>Free Certificate</div>
+            </div>{" "}
+          </div>
         </div>
+
+        {/* Popular courses */}
       </div>
+
       <h2 className="text-indigo-500 font-bold text-4xl text-center mt-10 mb-3">
         Find the best courses, wherever they exist
       </h2>
