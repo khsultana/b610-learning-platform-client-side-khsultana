@@ -91,7 +91,7 @@ const Home = () => {
             <p>Or browse by subject or university</p>
 
             <h2 className="font-semibold mb-2">Popular courses</h2>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-3 gap-2">
               <div className="flex w-40 items-center gap-1 rounded-xl border-2">
                 <div>
                   <img

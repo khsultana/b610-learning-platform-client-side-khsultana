@@ -11,15 +11,15 @@ const Header = () => {
 
   const handleUserSignOut = () => {
     userSignOut()
-      .then(() => { })
+      .then(() => {})
       .catch((err) => {
         console.log(err);
       });
   };
 
   return (
-    <div className="navbar bg-base-100 shadow-lg ">
-      <div className="navbar-start gap-4 font-semibold">
+    <div className=" sm:gap-3 sm:justify-center lg:navbar lg:bg-base-100 lg:shadow-lg ">
+      <div className=" sm:grid sm:grid-cols-1 lg:flex  lg:navbar-start lg:gap-4 lg:font-semibold sm:navbar-center  ">
         <Link to="/">Home</Link>
         <Link to="/courses">Courses</Link>
         <Link to="faq">FAQ</Link>
@@ -30,6 +30,7 @@ const Header = () => {
           size={60}
         />
       </div>
+
       <div className="navbar-center">
         <Link to="/" className="btn btn-ghost normal-case text-xl font-serif">
           Future Learn Digital

@@ -17,8 +17,8 @@ const Courses = () => {
   return (
     <div className=" p-5">
       <h2 className="text-2xl">Total List Of Courses :{courseList.length}</h2>
-      <div className="flex">
-        <div className="w-1/5">
+      <div className="lg:flex">
+        <div className="sm:w-full lg:w-1/5">
           {courseList.map((course) => (
             <p key={course.id}>
               <Link to={`/courses/${course.id}`}>
@@ -31,7 +31,7 @@ const Courses = () => {
         </div>
         {/* card */}
 
-        <div className="w-4/5  grid grid-cols-3 ">
+        <div className=" lg:w-4/5 lg:grid lg:grid-cols-3 sm:w-full sm:grid sm:grid-cols-1 ">
           {courseId.map((c) => (
             <Card key={c._id} c={c}></Card>
           ))}

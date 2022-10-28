@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="lg:w-auto  sm:mx-auto">
-      <footer className=" sm:flex-row  lg:flex  justify-around footer footer-center p-10 bg-base-200 text-base-content rounded">
+    <div className="lg:w-auto     lg:mx-auto">
+      <footer className="  lg:flex  justify-around footer footer-center p-10 bg-base-200 text-base-content rounded">
         <div className="flex flex-col items-start">
           <span className="footer-title">Browse by subject</span>
           <Link className="link link-hover">Computer Science</Link>
