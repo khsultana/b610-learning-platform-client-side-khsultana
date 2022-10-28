@@ -27,6 +27,8 @@ const CourseLink = () => {
               Back to Courses
             </button>
           </Link>
+          <Link><button className="btn btn-outline"></button>Premium Access</Link>
+          <Link><button className="btn btn-outline"></button>PDF Download</Link>
         </div>
       </div>
     </div>
