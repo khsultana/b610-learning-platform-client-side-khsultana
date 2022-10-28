@@ -27,7 +27,7 @@ const CourseLink = () => {
               Back to Courses
             </button>
           </Link>
-          <Link to="/login">
+          <Link to="/courseEnroll">
             <button className="btn btn-outline w-full"> Course Enroll</button>
           </Link>
           <Link>

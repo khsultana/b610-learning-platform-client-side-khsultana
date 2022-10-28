@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import CourseEnroll from "../../CourseLink/CourseEnroll/CourseEnroll";
 import CourseLink from "../../CourseLink/CourseLink";
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blogs/Blog";
@@ -7,6 +8,7 @@ import FAQ from "../../Pages/FAQ/FAQ";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Shared/Login/Login";
 import Register from "../../Shared/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
   {
@@ -48,6 +50,19 @@ export const routes = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+
+      {
+        path: "*",
+        element: <h1 className="text-red-600">Error Page Load : Found 404</h1>,
+      },
+      {
+        path: "/courseEnroll",
+        element: (
+          <PrivateRoute>
+            <CourseEnroll></CourseEnroll>
+          </PrivateRoute>
+        ),
       },
     ],
   },

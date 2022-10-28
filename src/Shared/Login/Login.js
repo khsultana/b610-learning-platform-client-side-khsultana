@@ -1,10 +1,16 @@
 import React from "react";
+import { useState } from "react";
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/Auth Provider/AuthProvider";
 import RightSide from "../RightSide/RightSide";
 
 const Login = () => {
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
+
+  const [error, setError] = useState(" ");
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -19,10 +25,12 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         form.reset();
-        navigate("/");
+        setError(" ");
+        navigate(from, { replace: true });
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
       });
   };
 
@@ -71,6 +79,7 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
               </div>
+              <p className="text-red-600">{error}</p>
               <RightSide></RightSide>
             </form>
           </div>
