@@ -1,0 +1,115 @@
+[debug] [2022-10-28T17:47:14.904Z] ----------------------------------------------------------------------
+[debug] [2022-10-28T17:47:14.907Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Acer\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-28T17:47:14.908Z] CLI Version:   11.15.0
+[debug] [2022-10-28T17:47:14.908Z] Platform:      win32
+[debug] [2022-10-28T17:47:14.908Z] Node Version:  v16.15.1
+[debug] [2022-10-28T17:47:14.921Z] Time:          Fri Oct 28 2022 23:47:14 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-10-28T17:47:14.922Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-28T17:47:15.083Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-28T17:47:15.084Z] > authorizing via signed-in user (sultanakh223@gmail.com)
+[debug] [2022-10-28T17:47:15.084Z] [iam] checking project future-learn-f78c1 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-28T17:47:15.087Z] > refreshing access token with scopes: []
+[debug] [2022-10-28T17:47:15.089Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-28T17:47:15.090Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-28T17:47:17.421Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-10-28T17:47:17.422Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-28T17:47:17.445Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/future-learn-f78c1:testIamPermissions [none]
+[debug] [2022-10-28T17:47:17.445Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/future-learn-f78c1:testIamPermissions x-goog-quota-user=projects/future-learn-f78c1
+[debug] [2022-10-28T17:47:17.446Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/future-learn-f78c1:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-28T17:47:19.097Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/future-learn-f78c1:testIamPermissions 200
+[debug] [2022-10-28T17:47:19.098Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/future-learn-f78c1:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-28T17:47:19.100Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/future-learn-f78c1 [none]
+[debug] [2022-10-28T17:47:20.130Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/future-learn-f78c1 200
+[debug] [2022-10-28T17:47:20.130Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/future-learn-f78c1 {"projectId":"future-learn-f78c1","projectNumber":"1049628222534","displayName":"Future Learn","name":"projects/future-learn-f78c1","resources":{"hostingSite":"future-learn-f78c1"},"state":"ACTIVE","etag":"1_6c115656-3c4c-4749-bb54-4b5f22ba5d6f"}
+[info] 
+[info] === Deploying to 'future-learn-f78c1'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-10-28T17:47:20.146Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/versions [none]
+[debug] [2022-10-28T17:47:20.147Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-10-28T17:47:29.466Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/versions 200
+[debug] [2022-10-28T17:47:29.468Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/versions {"name":"projects/1049628222534/sites/future-learn-f78c1/versions/b87573f9bd0f3a50","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[future-learn-f78c1]: beginning deploy... 
+[info] i  hosting[future-learn-f78c1]: found 14 files in build 
+[debug] [2022-10-28T17:47:29.513Z] [hosting] uploading with 200 concurrency
+[debug] [2022-10-28T17:47:30.221Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2022-10-28T17:47:30.222Z] [hosting][hash queue][FINAL] {"max":565,"min":15,"avg":73.85714285714286,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":630}
+[debug] [2022-10-28T17:47:30.222Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1049628222534/sites/future-learn-f78c1/versions/b87573f9bd0f3a50:populateFiles [none]
+[debug] [2022-10-28T17:47:30.223Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1049628222534/sites/future-learn-f78c1/versions/b87573f9bd0f3a50:populateFiles {"files":{"/favicon.ico":"7929f4c73a370a4cdd53e7a832c2b9deb858e0d4f9610b9a99cf3aaa9259920c","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/asset-manifest.json":"36f1d4c742ea5116e3d2452f2db80622cd65f26c4996eefcc8b45a18337383d0","/index.html":"9529c0e55f5c01144c652047ea521727c2df4c510e0e1e3da768423b485c6641","/static/js/787.b70053a1.chunk.js":"1271176f14a8819969d92d73f76b61733f25b6657067f2ad21b10501ab1161be","/static/js/787.b70053a1.chunk.js.map":"2be9c628f9cf21046111316cf5a92654210d34c7e8b97d5cfaebed9c2ff17b54","/static/js/main.fc59e305.js.LICENSE.txt":"ccd048b92d8861f182a277b19d04517d1a5f28e134b79ef751105b2d5306c7a3","/static/css/main.beb4f70c.css.map":"80cdc5b1129655c4df19dd202d26841c0f544dfd92dd8a85d8d224ae34f64c7c","/static/css/main.beb4f70c.css":"009084d4fd9329f24c86e180d2148407100e02737e7bae46a77a9cfef71fb3bc","/static/js/main.fc59e305.js":"c2bd3bd93202f969b783864ff8afa6ebb44de8b8f46c146b3ce06b98acad390a","/static/js/main.fc59e305.js.map":"c2f4a9a7da2eebc069d68fda40b0a2f89293c5234405a463416acc662968a21b"}}
+[debug] [2022-10-28T17:47:31.662Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1049628222534/sites/future-learn-f78c1/versions/b87573f9bd0f3a50:populateFiles 200
+[debug] [2022-10-28T17:47:31.663Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1049628222534/sites/future-learn-f78c1/versions/b87573f9bd0f3a50:populateFiles {"uploadRequiredHashes":["c2bd3bd93202f969b783864ff8afa6ebb44de8b8f46c146b3ce06b98acad390a","36f1d4c742ea5116e3d2452f2db80622cd65f26c4996eefcc8b45a18337383d0","c2f4a9a7da2eebc069d68fda40b0a2f89293c5234405a463416acc662968a21b","80cdc5b1129655c4df19dd202d26841c0f544dfd92dd8a85d8d224ae34f64c7c","9529c0e55f5c01144c652047ea521727c2df4c510e0e1e3da768423b485c6641","009084d4fd9329f24c86e180d2148407100e02737e7bae46a77a9cfef71fb3bc"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files"}
+[debug] [2022-10-28T17:47:31.672Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/c2bd3bd93202f969b783864ff8afa6ebb44de8b8f46c146b3ce06b98acad390a [none]
+[debug] [2022-10-28T17:47:31.672Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/c2bd3bd93202f969b783864ff8afa6ebb44de8b8f46c146b3ce06b98acad390a [stream]
+[debug] [2022-10-28T17:47:31.678Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/36f1d4c742ea5116e3d2452f2db80622cd65f26c4996eefcc8b45a18337383d0 [none]
+[debug] [2022-10-28T17:47:31.679Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/36f1d4c742ea5116e3d2452f2db80622cd65f26c4996eefcc8b45a18337383d0 [stream]
+[debug] [2022-10-28T17:47:31.681Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/c2f4a9a7da2eebc069d68fda40b0a2f89293c5234405a463416acc662968a21b [none]
+[debug] [2022-10-28T17:47:31.681Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/c2f4a9a7da2eebc069d68fda40b0a2f89293c5234405a463416acc662968a21b [stream]
+[debug] [2022-10-28T17:47:31.683Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/80cdc5b1129655c4df19dd202d26841c0f544dfd92dd8a85d8d224ae34f64c7c [none]
+[debug] [2022-10-28T17:47:31.683Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/80cdc5b1129655c4df19dd202d26841c0f544dfd92dd8a85d8d224ae34f64c7c [stream]
+[debug] [2022-10-28T17:47:31.685Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/9529c0e55f5c01144c652047ea521727c2df4c510e0e1e3da768423b485c6641 [none]
+[debug] [2022-10-28T17:47:31.685Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/9529c0e55f5c01144c652047ea521727c2df4c510e0e1e3da768423b485c6641 [stream]
+[debug] [2022-10-28T17:47:31.688Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/009084d4fd9329f24c86e180d2148407100e02737e7bae46a77a9cfef71fb3bc [none]
+[debug] [2022-10-28T17:47:31.688Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/009084d4fd9329f24c86e180d2148407100e02737e7bae46a77a9cfef71fb3bc [stream]
+[debug] [2022-10-28T17:47:31.690Z] [hosting][populate queue][FINAL] {"max":1452,"min":1452,"avg":1452,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1471}
+[debug] [2022-10-28T17:47:31.690Z] [hosting] uploads queued: 6
+[debug] [2022-10-28T17:47:36.046Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/80cdc5b1129655c4df19dd202d26841c0f544dfd92dd8a85d8d224ae34f64c7c 200
+[debug] [2022-10-28T17:47:36.047Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/80cdc5b1129655c4df19dd202d26841c0f544dfd92dd8a85d8d224ae34f64c7c [stream]
+[debug] [2022-10-28T17:47:36.317Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/36f1d4c742ea5116e3d2452f2db80622cd65f26c4996eefcc8b45a18337383d0 200
+[debug] [2022-10-28T17:47:36.318Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/36f1d4c742ea5116e3d2452f2db80622cd65f26c4996eefcc8b45a18337383d0 [stream]
+[debug] [2022-10-28T17:47:37.162Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/009084d4fd9329f24c86e180d2148407100e02737e7bae46a77a9cfef71fb3bc 200
+[debug] [2022-10-28T17:47:37.162Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/009084d4fd9329f24c86e180d2148407100e02737e7bae46a77a9cfef71fb3bc [stream]
+[debug] [2022-10-28T17:47:38.051Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/9529c0e55f5c01144c652047ea521727c2df4c510e0e1e3da768423b485c6641 200
+[debug] [2022-10-28T17:47:38.052Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/9529c0e55f5c01144c652047ea521727c2df4c510e0e1e3da768423b485c6641 [stream]
+[debug] [2022-10-28T17:47:39.584Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/c2bd3bd93202f969b783864ff8afa6ebb44de8b8f46c146b3ce06b98acad390a 200
+[debug] [2022-10-28T17:47:39.584Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/c2bd3bd93202f969b783864ff8afa6ebb44de8b8f46c146b3ce06b98acad390a [stream]
+[debug] [2022-10-28T17:47:52.560Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/c2f4a9a7da2eebc069d68fda40b0a2f89293c5234405a463416acc662968a21b 200
+[debug] [2022-10-28T17:47:52.561Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/future-learn-f78c1/versions/b87573f9bd0f3a50/files/c2f4a9a7da2eebc069d68fda40b0a2f89293c5234405a463416acc662968a21b [stream]
+[debug] [2022-10-28T17:47:52.562Z] [hosting][upload queue][FINAL] {"max":20895,"min":4379,"avg":8287,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":20898}
+[info] +  hosting[future-learn-f78c1]: file upload complete 
+[debug] [2022-10-28T17:47:52.568Z] [hosting] deploy completed after 23090ms
+[debug] [2022-10-28T17:47:52.584Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "future-learn-f78c1"
+    },
+    "version": "projects/1049628222534/sites/future-learn-f78c1/versions/b87573f9bd0f3a50"
+  }
+]
+[info] i  hosting[future-learn-f78c1]: finalizing version... 
+[debug] [2022-10-28T17:47:52.596Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/versions/b87573f9bd0f3a50 updateMask=status%2Cconfig
+[debug] [2022-10-28T17:47:52.596Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/versions/b87573f9bd0f3a50 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-10-28T17:47:54.419Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/versions/b87573f9bd0f3a50 200
+[debug] [2022-10-28T17:47:54.419Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/versions/b87573f9bd0f3a50 {"name":"projects/1049628222534/sites/future-learn-f78c1/versions/b87573f9bd0f3a50","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-10-28T17:47:24.683800Z","createUser":{"email":"sultanakh223@gmail.com"},"finalizeTime":"2022-10-28T17:47:54.098456Z","finalizeUser":{"email":"sultanakh223@gmail.com"}}
+[debug] [2022-10-28T17:47:54.420Z] [hosting] finalized version for future-learn-f78c1:[object Object]
+[info] +  hosting[future-learn-f78c1]: version finalized 
+[info] i  hosting[future-learn-f78c1]: releasing new version... 
+[debug] [2022-10-28T17:47:54.425Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/channels/live/releases versionName=projects%2F1049628222534%2Fsites%2Ffuture-learn-f78c1%2Fversions%2Fb87573f9bd0f3a50
+[debug] [2022-10-28T17:47:54.425Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/channels/live/releases {}
+[debug] [2022-10-28T17:47:56.437Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/channels/live/releases 200
+[debug] [2022-10-28T17:47:56.437Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/future-learn-f78c1/channels/live/releases {"name":"projects/1049628222534/sites/future-learn-f78c1/channels/live/releases/1666979275665193","version":{"name":"projects/1049628222534/sites/future-learn-f78c1/versions/b87573f9bd0f3a50","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-10-28T17:47:24.683800Z","createUser":{"email":"sultanakh223@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2GDUWpC3zlSoal9Qq81JutGgLuLdwatJq1VnnPOQ"},"finalizeTime":"2022-10-28T17:47:54.098456Z","finalizeUser":{"email":"sultanakh223@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2GDUWpC3zlSoal9Qq81JutGgLuLdwatJq1VnnPOQ"}},"type":"DEPLOY","releaseTime":"2022-10-28T17:47:55.665193978Z","releaseUser":{"email":"sultanakh223@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2GDUWpC3zlSoal9Qq81JutGgLuLdwatJq1VnnPOQ"}}
+[debug] [2022-10-28T17:47:56.438Z] [hosting] release: {"name":"projects/1049628222534/sites/future-learn-f78c1/channels/live/releases/1666979275665193","version":{"name":"projects/1049628222534/sites/future-learn-f78c1/versions/b87573f9bd0f3a50","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-10-28T17:47:24.683800Z","createUser":{"email":"sultanakh223@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2GDUWpC3zlSoal9Qq81JutGgLuLdwatJq1VnnPOQ"},"finalizeTime":"2022-10-28T17:47:54.098456Z","finalizeUser":{"email":"sultanakh223@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2GDUWpC3zlSoal9Qq81JutGgLuLdwatJq1VnnPOQ"}},"type":"DEPLOY","releaseTime":"2022-10-28T17:47:55.665193978Z","releaseUser":{"email":"sultanakh223@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2GDUWpC3zlSoal9Qq81JutGgLuLdwatJq1VnnPOQ"}}
+[info] +  hosting[future-learn-f78c1]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/future-learn-f78c1/overview
+[info] Hosting URL: https://future-learn-f78c1.web.app
+[debug] [2022-10-28T17:48:04.297Z] Error: Timed out.
+    at Timeout.<anonymous> (C:\Users\Acer\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.

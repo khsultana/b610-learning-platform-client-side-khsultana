@@ -1,6 +1,9 @@
 import React from "react";
+import useTitles from "../../Hooks/useTitle";
 
 const Home = () => {
+  useTitles("Home");
+
   return (
     <div>
       <div className="lg:w-auto sm:mx-auto">

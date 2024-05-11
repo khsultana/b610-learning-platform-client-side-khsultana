@@ -1,12 +1,14 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { useContext } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Context/Auth Provider/AuthProvider";
 
 const RightSide = () => {
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
   const { signInProvider } = useContext(AuthContext);
   const navigate = useNavigate();
   const googleProvider = new GoogleAuthProvider();
@@ -16,7 +18,7 @@ const RightSide = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        navigate("/");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);
